@@ -1,0 +1,48 @@
+{
+  "expo": {
+    "name": "ดูลายมือ",
+    "slug": "duu-line-mue",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "newArchEnabled": true,
+    "splash": {
+      "backgroundColor": "#1a0a2e"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.palmreader.duulinemue",
+      "infoPlist": {
+        "NSCameraUsageDescription": "ต้องการใช้กล้องเพื่อถ่ายภาพฝ่ามือ",
+        "NSPhotoLibraryUsageDescription": "ต้องการเข้าถึงรูปภาพเพื่อวิเคราะห์ลายมือ"
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#1a0a2e"
+      },
+      "package": "com.palmreader.duulinemue",
+      "permissions": ["CAMERA", "READ_EXTERNAL_STORAGE"]
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-camera",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "ต้องการเข้าถึงรูปภาพเพื่อวิเคราะห์ลายมือ",
+          "cameraPermission": "ต้องการใช้กล้องเพื่อถ่ายภาพฝ่ามือ"
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
